@@ -10,6 +10,8 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <livewire:create-post />
             </div>
+            
+                <livewire:list-post />
         </div>
     </div>
 </x-app-layout>
