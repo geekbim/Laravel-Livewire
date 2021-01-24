@@ -10,6 +10,12 @@
                 >
                     Edit
                 </button>
+                <button 
+                    wire:click="deletePost({{ $post->id }})"
+                    class="p-2 bg-red-600 hover:bg-red-400 text-white rounded-md"
+                >
+                    Del
+                </button>
             </div>
             <div>
                 @if($updateStateId !== $post->id)

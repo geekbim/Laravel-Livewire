@@ -35,10 +35,16 @@ class ListPost extends Component
     public function updatePost($postId)
     {
         $post = Post::find($postId);
-        $this->body = $post->body;
         $post->created_at = Carbon::now();
+        $post->body = $this->body;
         $post->save();
 
         $this->updateStateId = 0; //biar ketutup lagi textareanya
+    }
+
+    public function deletePost($postId)
+    {
+        $post = Post::find($postId);
+        $post->delete();
     }
 }
