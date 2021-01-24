@@ -7,6 +7,11 @@ use Livewire\Component;
 
 class ListPost extends Component
 {
+
+    protected $listeners = [
+        'postCreated' => '$refresh',
+    ];
+
     public function render()
     {
         $posts = Post::latest()->get();
